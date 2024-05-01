@@ -1,6 +1,6 @@
 # OPC UA and InfluxDB Test
 
-This is a simple test to show how to connect an OPC UA server to an InfluxDB database. The server is written in Python and uses the `asnycua` and `influxdb3-client` libraries. The server sends out 3 values every five seconds from a real data set when it gets started. It is intended for testing and illustration purposes.
+This is a simple test to show how to connect an OPC UA server to an InfluxDB database.
 
 ## Overview
 This projects consists of three parts:
@@ -11,4 +11,8 @@ This projects consists of three parts:
 ![Blueprint](Blueprint.png)
 
 ## IT
+### Infrastructure
 The OPC UA Server is a Docker container on a VM in the Akamai Cloud. The broker is another Docker container on the same VM. The InfluxDB is a managed service on Azure, accessible through Influxdata's web app.
+
+### Languages and dependencies
+The OPC UA Server is written in Python and uses the `asyncua` library. The broker is also written in Python and uses the `asyncua` and `influxdb` libraries. The InfluxDB is fully managed.
