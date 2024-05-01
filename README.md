@@ -9,10 +9,13 @@ This projects consists of three parts:
 3. InfluxDB: This is a time-series database that stores the data sent by the broker.
 
 ![Blueprint](Blueprint.png)
+## Security
+No element is publicly accessible. Access on is granted through personal request.
 
-## IT
-### Infrastructure
+## Infrastructure
 The OPC UA Server is a Docker container on a VM in the Akamai Cloud. The broker is another Docker container on the same VM. The InfluxDB is a managed service on Azure, accessible through Influxdata's web app.
 
-### Languages and dependencies
+## Languages and dependencies
 The OPC UA Server is written in Python and uses the `asyncua` library. The broker is also written in Python and uses the `asyncua` and `influxdb` libraries. The InfluxDB is fully managed.
+
+
